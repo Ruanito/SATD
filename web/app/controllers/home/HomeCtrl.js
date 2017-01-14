@@ -1,4 +1,4 @@
-angular.module('home').controller('HomeController',
+angular.module('home').controller('HomeCtrl',
 	['$scope',
 		function ($scope) {
 			/*

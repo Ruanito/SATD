@@ -14,6 +14,6 @@ angular.module('SATData').config(function($routeProvider){
 	$routeProvider.
 		when('/home', {
 			templateUrl: 'partials/home.html',
-			controller: 'HomeController'
+			controller: 'HomeCtrl'
 		}).otherwise('/home');
 });
