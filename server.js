@@ -7,6 +7,7 @@ var morgan            = require('morgan');
 var fs                = require('fs');
 var FileStreamRotator = require('file-stream-rotator');
 var mysql							= require('mysql');
+var bodyParser 				= require('body-parser');
 
 /*
 * Create Express app
@@ -65,6 +66,12 @@ app.listen(port, function() {
 * Write in log file
 */
 app.use(morgan('combined', {stream: accessLogStream}));
+
+/*
+* Parsing application/json
+*/
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /*
 * Use web folder to show index
