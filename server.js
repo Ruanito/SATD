@@ -10,6 +10,11 @@ var mysql							= require('mysql');
 var bodyParser 				= require('body-parser');
 
 /*
+* Routes
+*/
+var analysis = require('./routes/analysis');
+
+/*
 * Create Express app
 */
 var app = express();
@@ -77,3 +82,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 * Use web folder to show index
 */
 app.use('/', express.static('web'));
+
+app.get('/analysis/:keyWord', analysis.search);
