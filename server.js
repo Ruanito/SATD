@@ -6,11 +6,22 @@ var minimist          = require('minimist');
 var morgan            = require('morgan');
 var fs                = require('fs');
 var FileStreamRotator = require('file-stream-rotator');
+var mysql							= require('mysql');
 
 /*
 * Create Express app
 */
 var app = express();
+
+/*
+* Create database connection
+*/
+db = mysql.createConnection({
+	host: 		'localhost',
+	user: 		'sat_dev',
+	password: '123mudar',
+	database: 'satdata'
+});
 
 /*
 * Get atgv
