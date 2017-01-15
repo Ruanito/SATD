@@ -33,6 +33,7 @@
     "file-stream-rotator": "0.0.7",
     "grunt": "^1.0.1",
     "minimist": "^1.2.0",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "mysql": "^2.12.0"
   }
 }
