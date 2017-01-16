@@ -10,11 +10,6 @@ var mysql							= require('mysql');
 var bodyParser 				= require('body-parser');
 
 /*
-* Routes
-*/
-var analysis = require('./routes/analysis');
-
-/*
 * Create Express app
 */
 var app = express();
@@ -28,6 +23,12 @@ db = mysql.createConnection({
 	password: '123mudar',
 	database: 'satdata'
 });
+
+/*
+* Routes
+*/
+var analysis = require('./routes/analysis');
+
 
 /*
 * Get atgv
